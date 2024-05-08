@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('api/products', [ProductController::class, 'api'])->name('products.api');
 Route::resource('products', ProductController::class);
